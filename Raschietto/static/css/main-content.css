@@ -1,0 +1,112 @@
+#main-content h3 {
+	font-family: Gill Sans, Verdana;
+	font-size: 1.6em;
+	line-height: 100%;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	line-height: 160%;
+	font-weight: bold;
+	background-color: transparent !important;
+}
+
+.main-document{
+	z-index: 10;
+	position: relative;
+	box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, 0.16), 3px 6px 10px 0 rgba(0, 0, 0, 0.22);
+	padding: 20px !important;
+}
+
+#allAnnotations {
+	z-index: 1;
+	position: relative;
+	background: rgba(255,255,255,0.5);
+	box-shadow: none;
+
+}
+
+.s0{
+	width: 0px;
+}
+
+#main-content h4 {
+	font-family: Gill Sans, Verdana;
+	font-size: 1.4em;
+	/*line-height: 100%; */
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	background-color: transparent !important;
+}
+
+#main-content p {
+	background-color: transparent !important;
+}
+
+/* hr in dlib*/
+#main-content .divider-full {
+	border-bottom: 1px solid #bdbdbd;
+}
+
+#main-content a {
+	color: #0097a7;
+	text-decoration: underline;	
+}
+
+#mainContent a:hover {
+	color: #0097a7;
+	text-decoration: underline;	
+}
+
+#main-content img {
+	background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+/* Apici in dlib */
+#main-content h3 > span > a {
+	font-size: 14px;
+}
+
+ #main-content tr, #main-content td {
+	border: 1px solid #e0e0e0;
+}
+
+/* rivista-statistica.unibo.it   */
+#cookiesAlert {
+	background-color: transparent !important;
+}
+
+#main-content  table {
+	max-width: 100%;
+}
+
+/* table in mobile device (max-width: 760px) */
+@media 
+only screen and (max-width: 760px),
+/*(min-device-width: 768px) and (max-device-width: 1024px)*/  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+	}
+	/*
+	td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+
+	*/

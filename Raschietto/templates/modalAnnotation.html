@@ -1,0 +1,244 @@
+{% load staticfiles %}
+
+<!-- CREATE ANNOTATION MODAL -->
+<div id="createAnnotation" class="modal">
+	<div class="modal-content">
+		<h5>Create annotation</h5>
+
+		<div id="selectedTextArea">
+			<h6>Selected text</h6>
+			<p id="selectedText">...</p>
+		</div>
+
+		<div id="docInputArea" class="hide">
+			<h6>Annotation content</h6>
+			<input id="docInput" type="text" name="shortText" maxxlenght="80" size="30" placeholder="type here">
+		</div>
+
+		<!-- Widgets -->
+		<div id='widget'>
+
+			<!-- Comment widget -->
+			<div id="widgetComment" class='hide'>
+				<h6>Insert comment</h6>
+				<textarea id="inputComment" class="materialize-textarea" placeholder="here"></textarea>
+			</div>
+
+			<!-- Rhetorical function widget -->
+			<div id="widgetRhetorical" class='hide'>
+				<h6>Select a function</h6>
+				<p>
+					<input name="rhetoricalChoice" type="radio" id="abstract" value="abstract" />
+					<label for="abstract">Abstract</label>
+				</p>
+
+				<p>
+					<input name="rhetoricalChoice" type="radio" id="introduction" value="introduction" />
+					<label for="introduction">Introduction</label>
+				</p>
+
+				<p>
+					<input name="rhetoricalChoice" type="radio" id="materials" value="materials" />
+					<label for="materials">Materials</label>
+				</p>
+
+				<p>
+					<input name="rhetoricalChoice" type="radio" id="methods" value="methods" />
+					<label for="methods">Methods</label>
+				</p>
+
+				<p>
+					<input name="rhetoricalChoice" type="radio" id="results" value="results" />
+					<label for="results">Results</label>
+				</p>
+
+				<p>
+					<input name="rhetoricalChoice" type="radio" id="discussion" value="discussion" />
+					<label for="discussion">Discussion</label>
+				</p>
+
+				<p>
+					<input name="rhetoricalChoice" type="radio" id="conclusion" value="conclusion" />
+					<label for="conclusion">Conclusion</label>
+				</p>
+			</div>
+
+			<!-- Citation widget -->
+			<div id="widgetCitation" class='hide'>
+
+				<h6>Insert citated document's URL</h6>
+				<a class="btn tooltipped" data-position="right" data-delay="50" data-tooltip=" insert a URL">
+					<input id="inputCitedURL" type="text" name="shortText" maxxlenght="80" size="30" placeholder="example: www.example.it">
+				</a>
+			
+				<h6>Insert the author</h6>
+				<a class="btn tooltipped" data-position="right" data-delay="50" data-tooltip="remember capital letters: 'mario Rossi' or 'Mario rossi' are wrong">
+					<input id="inputCitedAuthor" type="text" name="shortText" maxxlenght="80" size="30" placeholder="example: Mario Rossi">
+				</a>
+
+				<h6>Insert citated document's pubblication year</h6>
+				<a class="btn tooltipped" data-position="right" data-delay="50" data-tooltip="insert an year before 1980">
+					<input id="inputCitedYear" type="text" name="shortText" maxxlenght="80" size="30" placeholder="example: 1969">
+				</a>
+
+				<h6>Insert citated document's DOI</h6>
+				<a class="btn tooltipped" data-position="right" data-delay="50" data-tooltip="insert a DOI">
+					<input id="inputCitedDOI" type="text" name="shortText" maxxlenght="80" size="30" placeholder="example: 10.1045/example">
+				</a>
+
+				<h6>Insert citated document's title</h6>
+				<a class="btn tooltipped" data-position="right" data-delay="50" data-tooltip="insert a title">
+					<input id="inputCitedTitle" type="text" name="shortText" maxxlenght="80" size="30" placeholder="example: Alice in Wonderland">
+				</a>
+			
+
+
+			</div>
+		</div>
+
+		<div id="modalSelectTypeAnnotation">
+			<div id="annotationSubject">
+				<h6>Annotation's Subject</h6>
+
+				<!-- Switch & Radio Button -->
+				<div class="switch">
+					<label>
+						Fragment
+
+						<input type="checkbox" onclick="switchAnnotationSubject()">
+						<span class="lever"></span>
+						Document
+					</label>
+				</div> 
+				<br>
+			</div>
+
+			<h6>Annotation's Type</h6>
+			<div id="docChoices" class="hide">
+			
+				<a class="waves-effect waves-light btn" onclick="checkInput('document', 'hasAuthor')">Author</a>
+				<a class="waves-effect waves-light btn" onclick="checkInput('document', 'hasPublicationYear')">Publication Year</a>
+				<a class="waves-effect waves-light btn" onclick="checkInput('document', 'hasTitle')">Title</a>
+				<a class="waves-effect waves-light btn" onclick="checkInput('document', 'hasURL')">URL</a>
+				<a class="waves-effect waves-light btn" onclick="checkInput('document', 'hasDOI')">DOI</a>
+
+			</div>
+
+			<div id="fragChoices">
+				<a class="waves-effect waves-light btn" onclick="modalSwitchPage('hasComment', 'widgetComment')">Comment</a>
+				<a class="waves-effect waves-light btn" onclick="modalSwitchPage('denotesRhetoric', 'widgetRhetorical')">Rhetorical Function</a>
+				<a class="waves-effect waves-light btn" onclick="modalSwitchPage('cites', 'widgetCitation')">Citation</a>
+			</div>
+
+		</div>
+	</div>
+	<div class="modal-footer">
+		<!-- CLOSE MODAL button -->
+		<button id="modalCloseButton" class="modal-action modal-close waves-effect waves-light red btn" onclick="modalReset()">
+			<i class="fa fa-times"></i>
+		</button>
+		<!-- CONFIRM MODAL button -->
+		<button id="modalConfirmButton" class="modal-action waves-effect waves-light cyan btn hide" onclick="modalConfirm()">
+			<i class="fa fa-check"></i>
+		</button>
+		<!-- PREVIOUS MODAL button -->
+		<button id="modalPreviousPageButton" class="modal-action waves-effect waves-light red btn hide" onclick="modalSwitchPage()">
+			<i class="fa fa-arrow-left"></i>
+		</button>
+	</div>
+</div>
+
+
+<!-- ANNOTATION'S INFORMATIONS MODAL -->
+
+<div id="annotationInfo" class="modal">
+  <div class="modal-content" id='annotationContents'>
+    
+  </div>
+</div>
+
+<div id="annotationDelete" class="modal bottom-sheet">
+	<div class="modal-content">
+		<h4>Elimina</h4>
+		<p>Ci sono <span id='annotationsNumber'></span> annotazioni presenti su questo documento, vuoi eliminarle?</p>
+		<button class="modal-action modal-close waves-effect waves-light red btn" >
+			<i class="fa fa-times"></i>
+		</button>
+		<button class="modal-action waves-effect waves-light cyan btn" onclick='confirmDelete()'>
+			<i class="fa fa-check"></i>
+		</button>
+	</div>
+</div>
+
+<!-- #annotationDocument è la modal che si apre cliccando su DocumentData sulla sidebar, contiene tutte le annotazioni
+sul documento -->
+
+<div id="annotationDocument" class="modal">
+	<div class="modal-content">
+		<h5>Title</h5>
+		<table class="striped bordered responsive-table">
+			<thead>
+				<tr>
+					<th data-field="value">Value</th>
+					<th data-field="user">User</th>
+					<th data-field="date">Date</th>
+				</tr>
+			</thead>
+			<tbody id="annotationDocument-Title">
+			</tbody>
+		</table>
+		
+		<h5>Author</h5>
+		<table class="striped bordered responsive-table">
+			<thead>
+				<tr>
+					<th data-field="value">Value</th>
+					<th data-field="user">User</th>
+					<th data-field="date">Date</th>
+				</tr>
+			</thead>
+			<tbody id="annotationDocument-Author">
+			</tbody>
+		</table>
+		
+		<h5>Pubblication Year</h5>
+		<table class="striped bordered responsive-table">
+			<thead>
+				<tr>
+					<th data-field="value">Value</th>
+					<th data-field="user">User</th>
+					<th data-field="date">Date</th>
+				</tr>
+			</thead>
+			<tbody id="annotationDocument-Year">
+			</tbody>
+		</table>
+		
+		<h5>DOI</h5>
+		<table class="striped bordered responsive-table">
+			<thead>
+				<tr>
+					<th data-field="value">Value</th>
+					<th data-field="user">User</th>
+					<th data-field="date">Date</th>
+				</tr>
+			</thead>
+			<tbody id="annotationDocument-DOI">
+			</tbody>
+		</table>
+		
+		<h5>URL</h5>
+		<table class="striped bordered responsive-table">
+			<thead>
+				<tr>
+					<th data-field="value">Value</th>
+					<th data-field="user">User</th>
+					<th data-field="date">Date</th>
+				</tr>
+			</thead>
+			<tbody id="annotationDocument-URL">
+			</tbody>
+		</table>
+		
+	</div>
+</div>

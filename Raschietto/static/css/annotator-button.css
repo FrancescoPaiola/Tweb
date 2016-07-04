@@ -1,0 +1,55 @@
+.btn-edit {
+  -webkit-transition: .5s ease-out;
+  -moz-transition: .5s ease-out;
+  -ms-transition: .5s ease-out;
+  -o-transition: .5s ease-out;
+  transition: .5s ease-out;
+}
+
+.muvt {
+  /*right: 150%*/
+}
+
+.img-edit {
+  -webkit-transition: .5s ease-out;
+  -moz-transition: .5s ease-out;
+  -ms-transition: .5s ease-out;
+  -o-transition: .5s ease-out;
+  transition: .5s ease-out;
+}
+
+.img-edit:hover {
+  -webkit-transform: rotate(494deg); /* Chrome, Safari, Opera */
+  -ms-transform: rotate(494deg); /* IE 9 */
+  transform: rotate(494deg);
+
+}
+
+#edit:hover{
+  margin-left: 1px;
+}
+
+.img-edit-rotated {
+  -webkit-transform: rotate(494deg); /* Chrome, Safari, Opera */
+  -ms-transform: rotate(494deg); /* IE 9 */
+  transform: rotate(494deg);
+  margin-left: 1px;
+}
+
+/* hide "Elimina e Modifica Annotazione" before hover on "Modifica" */
+.hide {
+  display: none;
+}
+
+.shown {
+  -webkit-transition: .20s ease-out;
+  -moz-transition: .20s ease-out;
+  -ms-transition: .20s ease-out;
+  -o-transition: .20s ease-out;
+  transition: .20s ease-out;
+}
+
+#annotator > ul
+{
+  bottom: 40px;
+}

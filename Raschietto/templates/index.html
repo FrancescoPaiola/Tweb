@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>Raschietto - Topwbrz</title>
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Titillium+Web:300" />
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/materialize.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/master.css' %}" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href="{% static 'images/favicon.ico' %}" />
+  </head>
+
+  <body>
+    <!-- loading animation -->
+    
+    <!-- sidebar -->
+    {% include 'sidebar.html' %}
+    <!-- Sidebar Mobile -->
+    {% include 'sidebar_mobile.html' %}
+    <!-- header --> 
+    {% include 'header.html' %}
+    <!-- content -->
+
+    {% include 'main.html' %}
+
+    <!-- About -->
+    {% include 'about.html' %} 
+    <!-- Settings -->
+    {% include 'settings.html' %} 
+    <!-- Modal Annotation -->
+    {% include 'modalAnnotation.html' %} 
+    <!-- Annotator -->
+    {% include 'annotator.html' %}
+    <!-- Login -->
+    {% include 'login.html' %}
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script> 
+
+    {% load staticfiles %}
+    <script src="{% static 'js/materialize.js' %}" ></script>
+    <script src="{% static 'js/variables.js' %}" ></script>  
+    <script src="{% static 'js/master.js' %}" ></script>
+    <script src="{% static 'js/modalsHandlers.js' %}" ></script> 
+    <script src="{% static 'js/selectionHandlers.js' %}" ></script>
+    <script src="{% static 'js/annotationHandlers.js' %}" ></script>
+    <script src="{% static 'js/spanHandlers.js' %}" ></script>
+    <script src="{% static 'js/loadAnnotations.js' %}" ></script>
+    <script src="{% static 'js/settings.js' %}" ></script>
+
+
+  </body>
+  
+</html>

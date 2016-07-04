@@ -1,0 +1,79 @@
+#loginmodal {
+  width: 300px;
+  height: 240px;
+  overflow: hidden;
+  font: 87.5%/1.5em "Open Sans", sans-serif;
+  color: #606468;
+  background: #2c3338;
+}
+
+#login input {
+  padding: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5em;
+  border: none;
+  -webkit-appearance: none;
+  height: 50px;
+}
+
+#login fieldset {
+  padding: -24em 0 0;
+  margin: 0 2px;
+  border: 0 solid #c0c0c0;
+}
+
+#login {
+  width: 280px;
+}
+
+/* Icon */
+#login form span {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #606468;
+  border-radius: 3px 0 0 3px;
+  background-color: #363b41;
+}
+
+#login form input[id="email"], input[id="username"] {
+  width: 230px;
+  margin-bottom: 1em;
+  color: #606468;
+  border-bottom: 0;
+  border-radius: 0 3px 3px 0;
+  background-color: #3b4148;
+}
+
+#login form input[type="submit"] {
+  width: 280px;
+  margin-bottom: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #eee;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ea4c88;
+}
+
+#login form input[type="submit"]:hover {
+  background-color: #d44179;
+}
+
+#login > p {
+  text-align: center;
+}
+
+#login > p span {
+  padding-left: 5px;
+}
+
+#login input{
+  padding-left: 5px;
+  box-sizing: border-box;
+}

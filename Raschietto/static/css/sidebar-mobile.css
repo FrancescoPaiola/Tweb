@@ -1,0 +1,88 @@
+#nav-mobile {
+  background: #eee;
+  -webkit-box-shadow: 4px 0 10px 0 rgba(0,0,0,.6);
+     -moz-box-shadow: 4px 0 10px 0 rgba(0,0,0,.6);
+          box-shadow: 4px 0 10px 0 rgba(0,0,0,.6);
+}
+
+#nav-mobile a {
+  color: #00bcd4;
+}
+
+#nav-mobile li:hover {
+  background: #eee;
+  -webkit-box-shadow: 4px 0 10px 0 rgba(0,0,0,.6);
+     -moz-box-shadow: 4px 0 10px 0 rgba(0,0,0,.6);
+          box-shadow: 4px 0 10px 0 rgba(0,0,0,.6);
+}
+
+#docmobile {
+  z-index: 1000;
+  padding-top: 2px;
+  border-bottom: 0;
+  background: #eee;
+  -webkit-box-shadow: 0 0 16px 3px rgba(0,0,0,.75);
+     -moz-box-shadow: 0 0 16px 3px rgba(0,0,0,.75);
+          box-shadow: 0 0 16px 3px rgba(0,0,0,.75);
+}
+
+/* modificato spostamento logo */
+/*@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    left: 30% !important;
+    -webkit-transform: translateX(-30%);
+       -moz-transform: translateX(-30%);
+        -ms-transform: translateX(-30%);
+         -o-transform: translateX(-30%);
+            transform: translateX(-30%);
+  }
+}*/
+
+/* SearchBar Mobile */
+
+.settings-mobile{
+  line-height: 0px !important;
+}
+
+#nav-mobile #search-button {
+  width: 20%;
+  padding-left: 0;
+}
+
+#nav-mobile #search-br-mobile {
+  width: 60%;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #00bcd4;
+}
+
+#nav-mobile #search-br-mobile::-webkit-input-placeholder {
+  color: #00bcd4;
+}
+
+#nav-mobile #icon-search {
+  color: #00bcd4;
+  padding-left: 0px;
+}
+
+#nav-mobile > li  {
+  display: block;
+  font-size: 1rem;
+  height: 64px;
+  line-height: 64px;
+  padding: 0 15px;
+}
+
+/* List Group -> Checkbox -> Soluzione casereccia */
+#nav-mobile #list-group input {
+  position: static;
+}
+
+#nav-mobile [type="checkbox"] + label {
+  padding-left: 0;
+  position: static;
+}
+
+#nav-mobile [type="checkbox"] + label:before {
+  content: none;
+}

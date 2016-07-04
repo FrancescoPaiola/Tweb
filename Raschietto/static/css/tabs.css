@@ -1,0 +1,25 @@
+#main-tabs.tabs {
+	margin-top: 10px;
+	background: #eee;
+}
+
+
+
+#main-tabs.tabs .tab a {
+	padding: 0px 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color:#00bcd4;
+}
+
+
+
+#main-tabs.tabs .active{
+	background: white;
+}
+
+.tabs .indicator {
+  background-color: #00bcd4;
+
+}

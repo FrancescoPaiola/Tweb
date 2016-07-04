@@ -1,0 +1,93 @@
+<div id='top' class="container">    
+<!-- Tabs --> 
+	<div class="row">
+    <div>
+      <ul class="tabs" id="main-tabs">
+        <li class="tab col s3" id="RaschiettoTab">
+          <a href="#div_0" onclick="selectTab(0)">Raschietto</a>
+        </li>   
+      </ul>
+      
+    </div>
+  </div> 
+
+ <!-- Doc -->
+  <div class="row" id='main-content'>
+
+    <div class='card-panel' id='div_0'>
+      <h5>Benvenuto in Raschietto</h5><hr>
+      <p>Raschietto è un'applicazione per l'annotazione semantica di articoli scientifici.</p>
+      <p>Puoi interagire con l'applicazione in due modalità d'uso:
+      
+      <blockquote><b>Reader</b>: puoi aprire qualsiasi documento, esaminare le annotazioni già presenti, filtrare le annotazioni per tipo e per gruppo che le ha create. Infine potrai passare alla modalità Annotator.</blockquote>
+      <blockquote><b>Annotator</b>: dopo aver fatto login con Nome Utente ed Email potrai creare nuove annotazioni, modificare quelle già presenti e salvarle in rete.</blockquote>
+      </p>
+
+      <h5>Reader</h5><hr>
+      <p>
+      L'utente potrà visualizzare i documenti già annotati da parte di qualcuno selezionandoli dalla tab "Documents" presente nella sidebar. E' possibile anche inserire l'URL di una pagina qualunque, il sistema la visualizzerà nel modo migliore possibile e se in grado partirà con lo scraping automatico.
+      </p>
+      <p>
+      Selezionando un documento dalla tab "Documents" si vedranno subito le annotazioni presenti nel 3-store, visualizzate con colori diversi a seconda del tipo. E' possibile filtrare la visualizzazione delle annotazioni sia per tipo e sia per grafo di provenienza.
+      </p>
+      <p>
+        Nella tab "Document Data" si potranno esaminare le meta-informazioni del documento.
+      </p>
+      <p>
+        Clickando su "Force Scraping" le annotazioni visualizzate, create e non salvate verranno cancellate e partirà il nostro scraper automatico che sarà in grado di creare annotazioni esaminando il documento.
+      </p>
+      <p>
+        Con un doppio click su un'annotazione l'utente potrà esaminare i meta-dati dell'annotazione stessa.
+      </p>
+      <p>
+        Nella topbar oltre alla pagina About e alla pagina Settings, l'utente potrà switchare modalità diventando Annotator, clickando sullo switch si aprirà una modale in cui l'utente dovrà inserire il proprio UserName e la propria Email.
+      </p>
+      <h5>Annotator</h5><hr>
+      <p>In questa modalità l'utente potrà fare tutto quello che poteva fare in modalità Reader ma in più potrà creare, modificare e cancellare annotazioni. Naturalmente potrà anche salvarle.
+      Nell'angolo in basso a destra compare un menù appunto con queste 3 possibilità.
+      <h5> Sidebar </h5>
+      <hr>
+
+      <p>
+        <i class="mdi-file-folder"></i>  Documents : lista dei documenti caricati in rete, clicca su uno dei documenti per aprirlo
+      </p>
+      <p>
+        <i class="mdi-content-content-paste"></i>  Document Data : lista delle annotazioni sul documento corrente
+      </p>
+      <p>
+        <i class="fa fa-users"></i>   Groups: permette di scegliere di quali gruppi visualizzare le annotazioni
+      </p>
+      <p>
+        <i class="fa fa-filter"></i>  Filters: permette di scegliere quai tipi di annotazione visualizzare
+      </p>
+      <p>
+        <i class="fa fa-truck"></i>  Force Scraping: forza l'analisi della pagina alla ricerca di dati rilevanti, quindi crea le rispettive annotazioni 
+      </p>
+
+      <h5> Searchbar </h5>
+      <hr>
+        Inserisci l'URL di un articolo che vuoi caricare ed annotare/leggere da:
+        <li><a href="http://www.dlib.org"> D-Lib magazine </a></li>
+        <li><a href="http://journals.unibo.it/riviste/"> AlmaDL Journals </a></li>
+        Quindi premi Invio o clicca sul tasto cerca <i class="fa fa-search"></i>.
+        Se il documento è già stato caricato sul sito, viene preso da li, altrimenti viene aggiunto nell'elenco dei documenti disponibili.
+      <p>
+
+      <h5> Menu </h5>
+      <hr>
+      <p>
+        <b>Settings: </b> permette di personalizzare l'aspetto del sito
+      </p>
+      <p>
+        <b>Show Annotations: </b> visualizza la lista di tutte le annotazioni non ancora salvate presenti sul documento
+      </p>
+      <p>
+        <b>About: </b> autori del sito e logo del progetto
+      </p>
+      <p>
+        <b>Switcher: </b> clicca per passare dalla modalità Reader a quella Annotator e viceversa
+      </p>
+
+    </div>
+  </div>
+</div>

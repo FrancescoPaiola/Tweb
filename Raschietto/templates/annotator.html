@@ -1,0 +1,28 @@
+<!-- Select the type of annotation -->
+
+<div id='annotator' class="fixed-action-btn reader" style="bottom: 45px; right: 24px;">
+  <button class="btn-floating btn-large red">
+    <i class="large mdi-content-add"></i>
+  </button>
+
+  <ul>    
+    <li>
+      <button class="btn-floating blue annotator-ball tooltipped btn-delete" data-position="left"  data-tooltip="Delete" onclick='deleteModal()'>
+        <i class="large mdi-action-delete"></i>
+      </button>
+    </li>
+
+    <li>
+      <button class="btn-floating blue annotator-ball tooltipped btn-add" data-position="left"  data-tooltip="New" onclick='createAnnotation()'>
+        <i class="large mdi-content-add"></i>
+      </button>
+    </li>
+
+    <li>
+      <button class="btn-floating btn-large pink annotator-ball accent-4 btn-last tooltipped" data-position="left"  data-tooltip="Save" onclick='save()'>
+        <i class="large mdi-editor-publish"></i>
+      </button>
+    </li>
+
+  </ul>
+</div>

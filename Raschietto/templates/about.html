@@ -1,0 +1,44 @@
+{% load staticfiles %}
+
+<div id="about" class="modal">
+  <div class="modal-content">
+
+    <h4>About</h4>
+
+    <ul class="collection">
+
+      <li class="collection-item avatar">
+        <img id='sga' src="{% static 'images/Sga.png' %}" alt="" class="circle about-avatar" >
+        <ul> 
+          <li >
+            <span class='about-title'>Matteo "Sga" Semeraro</span>
+            <p>Informatica <br>656233</p>
+          </li>
+        </ul>
+      </li>
+
+      <li class="collection-item avatar">
+        <img id='turk' src="{% static 'images/Turk.png' %}" alt="" class="circle about-avatar" >
+        <ul>
+          <li>
+            <span class="about-title">Federico "Turk" Govoni</span>
+            <p>Informatica <br>652097 </p>
+          </li>
+        </ul>
+      </li>
+
+      <li class="collection-item avatar">
+        <img id='ferra' src=" {% static 'images/Ferrari.jpg' %}" alt="" class="circle about-avatar" >
+        <ul >
+          <li>
+            <span class="about-title">Daniele "Ferro" Ferrari</span>
+            <p>Informatica <br>653614</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div id="logo-about">
+      <img src=" {% static 'images/raschietto.png' %}" >
+    </div>
+  </div>
+</div>

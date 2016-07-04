@@ -1,0 +1,38 @@
+/* Probabilmente da cancellare perchè non serve */
+
+#document-info {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding-right: 15px;
+}
+
+li .document-li {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 0;
+  border-bottom: 1px solid #00acc1;
+  line-height: 35px;
+}
+
+.label-data {
+  font-size: 0.95em;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;   
+  color:#fff;
+  background-color: #00bcd4;
+  padding: 0 8px 0 8px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.label-data-value {
+  font-size: 0.85em;
+  font-family: 'Titillium Web', sans-serif;
+  color: #00bcd4 ;
+  padding: 0 5px 0 5px;
+}
+
+.document-mobile {
+  line-height: 13px !important;
+}

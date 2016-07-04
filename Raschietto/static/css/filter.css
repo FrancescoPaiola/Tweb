@@ -1,0 +1,159 @@
+#list-filter {
+  z-index: 1000;
+  padding-top: 2px;
+  padding-right: 5px;
+  overflow-y: scroll;
+  border-bottom: 0;
+  background: #eee;
+  -webkit-box-shadow: 0 0 16px 3px rgba(0,0,0,.75);
+     -moz-box-shadow: 0 0 16px 3px rgba(0,0,0,.75);
+          box-shadow: 0 0 16px 3px rgba(0,0,0,.75);
+}
+
+#list-filter ul li {
+  line-height: 30px;
+}
+
+.annotation {
+	border-radius: 3px;
+}
+
+
+/*for annotation*/
+.author {
+	background-color: rgba(255,255,0,0.4)!important;
+	
+}
+.year {
+	background-color: rgba(255,0,255,0.4)!important;
+	
+}
+.title {
+	background-color: rgba(0,0,255,0.4)!important;
+	
+}
+.doi {
+	background-color: rgba(40,40,40,0.4)!important;
+	
+}
+.uri {
+	background-color: rgba(255,105,180,0.4)!important;
+	
+}
+.comment {
+	background-color: rgba(0,255,0,0.4)!important;
+	
+}
+.rhetoric {
+	background-color: rgba(255,0,0,0.4)!important;
+	
+}
+.cites {
+	background-color: rgba(173,255,47,0.4)!important;
+	
+}
+
+.highlight{
+	cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25), 0 2px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+/*for annotation botton*/
+
+.author.annotation-botton {
+	border: 3px solid yellow;	
+}
+.year.annotation-botton {
+	border: 3px solid purple;	
+}
+.title.annotation-botton {
+	border: 3px solid blue;	
+}
+.doi.annotation-botton {
+	border: 3px solid grey;	
+}
+.uri.annotation-botton {
+	border: 3px solid pink;
+}
+.comment.annotation-botton {
+	border: 3px solid green;	
+}
+.rhetoric.annotation-botton {
+	border: 3px solid red;	
+}
+.cites.annotation-botton {
+	border: 3px solid lime;	
+}
+
+.annotation-disabled { 
+	background-color: transparent !important;
+	color: black;
+}
+
+.annotation-disabled-graph { 
+	background-color: transparent !important;
+	color: black;
+}
+
+
+
+.label-filter {
+	font-size: 0.95em;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;   
+  color:#fff;
+  background-color: #00bcd4;
+  padding: 0 8px 0 8px;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+.select-filter {
+	display: inline;	
+	text-align: right;
+	-webkit-border-radius: 50%;
+     -moz-border-radius: 50% ;
+          border-radius: 50% ;
+	font-size: 0.95em; 
+	height: 20px;
+	width: 20px;
+	vertical-align: middle;
+	border: none;
+	padding: 0;
+}
+
+.left-label-span {
+	float: left;
+	display: block;
+	width: 50%;
+	text-align: center;
+}
+
+.right-label-span {
+	float: right;
+	display: block;
+	width: 50%;	
+	text-align: center;
+}
+
+.filter-li span {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	margin-left: 10px;
+	float: left;
+}
+
+.filter-li button {
+	float: right;
+	margin-right: 40px;
+	margin-top: 6px;
+}
+
+.filter-li {
+	border-bottom: 1px solid #00acc1;
+}
+
+.black-text {
+	color: black !important;
+}

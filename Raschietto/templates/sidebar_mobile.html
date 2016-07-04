@@ -1,0 +1,165 @@
+<ul id='nav-mobile' class='side-nav' >
+
+  <li>
+    <form class='form-search'>
+      <button id='search-button'>
+        <i class='fa fa-search' id='icon-search'></i>
+      </button>
+
+      <input type='text' name='search-br' class='search-br' id='search-br-mobile' placeholder='Search' />
+    </form>
+  </li>
+
+  <ul class='collapsible sidecollapsible' id='toggle' >
+
+   <li class='tab side-item'>
+      <div class='collapsible-header sidecollapsed' id='Document'>
+        <a href='#'>
+          <i class='mdi-file-folder'></i>
+          <span class='nav-text' >            
+            Documents
+          </span>
+        </a>
+      </div>
+
+      <div class='collapsible-body' id='list-doc-area'>
+        <div class='row'>
+          <ul class='list-docs'>
+             {% for doc in docs %}   
+            <li>
+              <a class='doc-link ' onclick='getData(name)' name='{{doc.doc.value}}'>
+              {% if doc.lab.value %}
+                {{doc.lab.value}}
+              {% else %}
+                {{doc.doc.value}}
+              {% endif %}</a>
+            </li>
+            {%endfor%}
+          </ul>
+        </div>
+    </li>
+    
+    <!-- Inizio MetaDati Documenti -->
+ <li class='tab side-item'>
+      <div class='collapsible-header sidecollapsed'>
+        <a href='#annotationDocument' class="modal-trigger">
+          <i class='mdi-content-content-paste'></i>
+          <span class='nav-text '>
+            Document Data
+          </span>
+        </a>
+      </div>
+    </li>  
+
+   <li class='tab side-item hide-on-med-and-up'>
+    <div class="collapsible-header sidecollapsed">
+          <a class="waves-effect waves-light" onclick="populateSpan()"><i class='material-icons'>chat_bubble_outline</i> Show Annotations</a>
+        </div>
+        </li>
+
+
+
+   <li class='tab side-item'>
+      <div class='collapsible-header sidecollapsed'>
+        <a href='#'>
+          <i class='fa fa-users'></i>
+          <span class='nav-text ' >            
+            Groups <span class="nGroups badge"></span>
+          </span>
+        </a>
+      </div>
+
+      <div class='collapsible-body' id='list-group'>
+        <div class='row'>          
+          <ul>                
+            {% for group in Groups %}    
+            <li>
+              <form>
+                 <input type='checkbox' class='{{group.groupId}}' disabled onclick = 'disableGraph("{{group.groupId}}")'/>
+                <label for='{{group.groupId}}'>{{group.name}}</label>
+              </form>
+            </li>
+            {%endfor%}
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <li class='tab side-item'>
+      <div class='collapsible-header sidecollapsed'>
+        <a href='#'>
+          <i class='fa fa-filter'></i>
+          <span class='nav-text'>
+            Filters
+          </span>
+        </a>
+      </div>
+
+      <div class='collapsible-body' id='list-filter'>
+        <div class='row'>
+          <ul>
+            <li>
+              <span class='label-filter'>Authors</span>
+              <button class='right select-filter waves-effect waves-light btn author  annotation-botton' name='author' value='author' onclick='disableAnnotation(name)'></button>
+            </li>
+            
+            <li>
+              <span class='label-filter left'>Title</span>
+              <button class='right select-filter waves-effect waves-light btn title  annotation-botton' name='title' onclick='disableAnnotation(name)'></button>
+            </li>
+            <br>
+            <br>
+            <li>
+              <span class='label-filter'>Url</span>
+              <button class='right select-filter waves-effect waves-light btn uri  annotation-botton' name='uri' onclick='disableAnnotation(name)'></button>
+            </li>
+            <li>
+              <span class='label-filter'>Comments</span>
+              <button class='right select-filter waves-effect waves-light btn comment  annotation-botton' name='comment' onclick='disableAnnotation(name)'></button>
+            </li>
+            <li>
+              <span class='label-filter'>Rhetorics</span>
+              <button class='right select-filter waves-effect waves-light btn rhetoric annotation-botton'name='rhetoric' onclick='disableAnnotation(name)'> </button>
+            </li>
+            <li>             
+              <span class='label-filter'>Citations</span>
+              <button class='right select-filter waves-effect waves-light btn cites annotation-botton' name='cites' onclick='disableAnnotation(name)'></button>
+            </li>
+            <li>
+              <span class='label-filter left'>Doi</span>
+              <button class='right select-filter waves-effect waves-light btn doi  annotation-botton' name='doi' onclick='disableAnnotation(name)'></button>
+            </li>
+
+               <li>
+                <br>
+                <br>
+              <span class='label-filter left'>Pubblication Years</span>
+              <button class='right select-filter waves-effect waves-light btn year annotation-botton' name='year' onclick='disableAnnotation(name)'></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <li class='tab side-item'>
+        <div class='collapsible-header sidecollapsed'>
+          <a onclick='forceParse()'>
+            <i class="fa fa-truck"></i>
+            <span class='nav-text'>
+              Force Scraping
+            </span>
+          </a>
+        </div>
+      </li>
+
+      <li class='tab side-item'>
+        <div class='collapsible-header sidecollapsed'>
+           <a class='modal-trigger hide-on-med-and-up' href='#about'>
+            <i class='fa fa-info'></i>
+            <span class='nav-text'> About</span>
+          </a>
+        </div>
+      </li>
+    
+
+  </ul>
+</ul>

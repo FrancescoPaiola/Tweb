@@ -1,0 +1,93 @@
+/* label switch annotator/reader */
+label {
+  color: #FFFFFF;
+  font-size: 1rem;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.switch label input[type="checkbox"]:checked + .lever::after {
+  background-color: #F1F1F1;
+}
+.switch label input[type="checkbox"]:checked + .lever {
+  background-color: #818181;
+}
+
+/* Hide button */
+.reader{
+  display: none;
+}
+
+/* SearchBar select */
+.input-field .prefix.active {
+  color: #E8E8E8; 
+  margin-left: 6px;
+}
+
+.input-field label {
+  color: #FFF;
+}
+
+input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: #E8E8E8; 
+}
+
+::-webkit-input-placeholder {
+  color: #FFF;
+  padding-left: 3px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #FFF;
+  padding-left: 3px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #FFF;
+  padding-left: 3px;
+}
+
+:-ms-input-placeholder {  
+  color: #FFF;
+  padding-left: 3px;
+}
+
+/* Riduco la larghezza dell'input-field */
+.input-field .prefix ~ input, .input-field .prefix ~ textarea {
+  width: calc(100% - 5rem);
+}
+
+
+
+/* Searchbar of documents */
+.search-br{
+  margin-top: 10px;
+  margin-right: 10px !important;
+  margin-bottom: 10px;
+  border-bottom: 0px;
+  box-shadow: none;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.search-br:focus{
+  background: white;
+  color: black;
+  border-radius: 120px;
+  height: 25px;
+}
+
+#icon-search {
+  font-size: 1.33333333em;
+  padding: 0 10px 0 10px;
+}
+
+#search-button {
+  background: transparent;
+  border: none;
+}
+
+.form-search {
+  height: 64px; 
+}

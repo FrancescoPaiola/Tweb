@@ -1,0 +1,118 @@
+/* Style for collapsable elements in sidebar */
+.sidecollapsible {
+  border: 0;
+  background: #eee;
+  all: none;   /* ? */
+}
+
+.sidecollapsed {
+  width: 244px;
+  height: 64px;
+  padding-top: 7px;
+  padding-left: 0;
+  border: 0;
+  background: transparent;
+}
+
+.sidecollapsed:hover {
+  width: 250px;
+  -webkit-box-shadow: 0 0 4px 3px rgba(0,0,0,.39);
+     -moz-box-shadow: 0 0 4px 3px rgba(0,0,0,.39);
+          box-shadow: 0 0 4px 3px rgba(0,0,0,.39);
+}
+
+/* Area of list of documents */
+#list-doc-area {
+  z-index: 1000;
+  height: 200px;
+  padding-top: 2px;
+  padding-right: 5px;
+  overflow-y: scroll;
+  border-bottom: 0;
+  background: #eee;
+  -webkit-box-shadow: 0 0 16px 3px rgba(0,0,0,.75);
+     -moz-box-shadow: 0 0 16px 3px rgba(0,0,0,.75);
+          box-shadow: 0 0 16px 3px rgba(0,0,0,.75);
+}
+
+.list-docs li {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom: 1px solid #00acc1;
+}
+
+#nav-mobile .list-docs li {
+  poverflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.doc-link{
+  line-height: 20px;
+  padding-top: 5px;
+  font-size: 0.8em;
+}
+
+#list-doc-area li:hover > a {
+  background-color: #e2e2e2;
+  -webkit-box-shadow: 0px 0px 4px 3px rgba(0,0,0,0);
+  -moz-box-shadow: 0px 0px 4px 3px rgba(0,0,0,0);
+  box-shadow: 0px 0px 4px 3px rgba(0,0,0,0);
+}
+
+
+.side-item {
+  margin-top: 5px;
+}
+ 
+/* List of documents on sidebar */ 
+#list-doc-area > .row {
+  margin-bottom: 0;
+}
+
+.tab > li {
+  margin-top: 0;
+}
+
+.tab .col {
+  padding: 2px;
+}
+
+#sidebar, #sidebar a, #sidebar li {
+  color: #00bcd4 ;
+}
+
+/* List groups */
+
+#list-group {
+  z-index: 1000;
+  height: 300px;
+  padding-top: 2px;
+  padding-right: 5px;
+  overflow-y: scroll;
+  border-bottom: 0;
+  background: #eee;
+  -webkit-box-shadow: 0 0 16px 3px rgba(0,0,0,.75);
+     -moz-box-shadow: 0 0 16px 3px rgba(0,0,0,.75);
+          box-shadow: 0 0 16px 3px rgba(0,0,0,.75);
+}
+
+#list-group ul li {
+  padding-left: 20px;
+  line-height: 20px;
+}
+
+#list-group label {
+  color: #00bcd4;
+}
+
+[type="checkbox"] + label:before {
+  border-color: #00bcd4;
+}
+
+[type="checkbox"]:checked + label:before {
+  border-right: 2px solid #00bcd4;
+  border-bottom: 2px solid #00bcd4;
+}
+

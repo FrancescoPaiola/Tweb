@@ -1,0 +1,64 @@
+{% load staticfiles %}
+
+<div id="settings" class="modal">
+  <div class="modal-content">
+    <div class="row section">
+      <div class="col s4">
+        <h5 class="center">Background</h5>
+      </div>
+      <div class="col s8">
+        <div class="center">
+          <input type="image" src="{% static 'images/background1.png' %}" alt="background1" id="background1" class="background">
+          <input type="image" src="{% static 'images/background2.png' %}" alt="background2" id="background2" class="background">
+          <input type="image" src="{% static 'images/background3.png' %}" alt="background3" id="background3" class="background">
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row section">
+      <div class="col s4">
+        <h5 class="center">Font Size</h5>
+      </div>
+      <div class="col s8">
+        <div class="center">
+          <button class="btn waves-effect waves-light cyan" type="submit" name="action" id="plusFontSize">
+            <i class="fa fa-plus"></i>
+          </button>
+          <button class="btn waves-effect waves-light cyan" type="submit" name="action" id="minusFontSize">
+            <i class="fa fa-minus"></i>
+          </button>
+          <button class="btn waves-effect waves-light green" type="submit" name="action" id="defaultFontSize">
+            <i class="fa fa-refresh fa-spin"></i>
+          </button>
+
+          <p id="example-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies.</p>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row section">
+      <div class="col s4">
+        <h5 class="center">Navbar</h5>
+      </div>
+      <div class="col s8">
+        <div class="center">
+          <div class="input-field col s12">
+             <button class="btn waves-effect waves-light deep-orange darken-4" type="submit" name="action" id="redButton">
+              <i class="fa fa-hand-spock-o"></i>
+            </button>
+             <button class="btn waves-effect waves-light teal" type="submit" name="action" id="tealButton">
+              <i class="fa fa-hand-lizard-o"></i>
+            </button>
+            <button class="btn waves-effect waves-light purple darken-4" type="submit" name="action" id="purpleButton">
+              <i class="fa fa-hand-scissors-o"></i>
+            </button>
+            <button class="btn waves-effect waves-light purple cyan" type="submit" name="action" id="cyanButton">
+              <i class="fa fa-refresh fa-spin"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

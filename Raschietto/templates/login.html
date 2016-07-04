@@ -1,0 +1,24 @@
+<div id="loginmodal" class="modal modal-fixed-footer">
+  <div id="login">
+    <form name="login">
+    <!--- forse dobbiamo metterci un onSubmit="return checkform() per il controllo? -->
+      <fieldset class='loginfield'>
+
+        <p>
+          <span class="fa fa-user"></span>
+          <input id="username" type="text" value="username" placeholder="username" onBlur="if(this.value == '') this.value = 'username'" onFocus="if(this.value == 'username') this.value = ''" required>          
+        </p>
+
+        <p>
+          <span class="fa fa-envelope-o"></span>
+          <input id="email" type="email" value="example@example.com" placeholder="email" onBlur="if(this.value == '') this.value = 'example@example.com'" onFocus="if(this.value == 'example@example.com') this.value = ''" required>
+        </p>
+
+       <p>
+        <input type="submit" value="login">
+       </p>
+
+      </fieldset>
+    </form>
+  </div>
+</div>

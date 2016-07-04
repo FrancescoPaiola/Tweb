@@ -1,0 +1,83 @@
+<div class="navbar-fixed" id='header'>
+  <nav class="cyan" role="navigation">
+
+    <a href="#" data-activates="nav-mobile" class="button-collapse show-on-small">
+      <i class="mdi-navigation-menu"></i>
+    </a>
+
+    <div class="nav-wrapper container ">
+     <a id="logo" href="#" class="brand-logo center hide-on-med-and-down">Raschietto</a>
+     <a id="logo" href="#" class="brand-logo center hide-on-large-only">Twbz</a>
+          <ul class="left hide-on-small-only hide-on-large-only">
+       
+     <li><a href="#settings" class="waves-effect waves-light modal-trigger"><i class="material-icons left">settings</i>Settings</a></li>
+</ul>  
+
+      <ul class="left hide-on-med-and-down">
+       
+        <li>
+          <form class="form-search">
+            <button id='search-button' class='not-mobile'>
+              <i class="fa fa-search" id="icon-search" class='not-mobile' ></i>
+            </button>
+            
+            <input type="text" name="search-br" id="search-br" placeholder="Search" class='search-br'/>
+          </form>
+        </li>
+        </ul>
+        <ul class='right hide-on-med-and-down'>
+ <li><a href="#settings" class="waves-effect waves-light modal-trigger"><i class="material-icons left">settings</i>Settings</a></li>
+        <li>
+          <a class="waves-effect waves-light" onclick="populateSpan()">Show Annotations</a>
+        </li>
+
+        <li>
+          <a class="waves-effect waves-light modal-trigger" href="#about">About</a>
+        </li>
+
+        <li>
+          <div class="switch tooltipped" data-position="left" data-tooltip="Switch Reader/Annotator">
+            <label>
+              R
+              <input type="checkbox" onclick="switcher(this)">
+                <span class="lever"></span>
+              A
+            </label>
+          </div>
+        </li>
+        
+      </ul>
+
+
+<!-- VERSIONE MOBILE -->
+
+
+     <ul class='right hide-on-large-only'>
+
+        <li class='hide-on-small-only'>
+          <a class="waves-effect waves-light" onclick="populateSpan()"><i class='material-icons'>chat_bubble_outline</i></a>
+        </li>
+
+        <li class='hide-on-small-only'>
+          <a class="waves-effect waves-light modal-trigger" href="#about"><i class='material-icons'>contacts</i></a>
+        </li>
+      
+        <li>
+          <div class="switch tooltipped" data-position="left" data-tooltip="Switch Reader/Annotator">
+            <label>
+              <span class='not-mobile'>R</span>
+              <input type="checkbox" onclick="switcher(this)">
+                <span class="lever"></span>
+              <span class='not-mobile'>A</span>
+            </label>
+          </div>
+        </li>
+         
+        </ul>
+      
+
+
+    </div>
+
+  </nav>
+</div>
